@@ -7,8 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
   </head>
-  <body class="m-0 p-0 bg-[#E1DFDD] font-['PP Neue Montreal']">
-    <div class="h-full w-full">
+  <body class="m-0 p-0 bg-[#E1DFDD] font-['PP Neue Montreal'] scroll-smooth">
+    <div
+      class="bg-black text-white h-[4000px] font-semibold lg:text-[50px] md:text-[30px] text-[20px]"
+      id="test"
+    >
+      <div class="ml-4 p-8 flex justify-between">
+        <div>
+          <p>Muzammil Ahmad</p>
+          <p class="md:-mt-4 -mt-2 lg:-mt-15">Portfolio@22</p>
+        </div>
+        <div class="lg:text-[70px] md:text-[50px] text-[30px]">
+          <p class="font-bold" id="counter">0</p>
+        </div>
+      </div>
+    </div>
+    <div class="h-full w-full hidden" id="full">
       <div
         class="lg:flex w-full h-fit py-4 px-6 font-semibold text-[30px] hidden"
       >
@@ -298,4 +312,17 @@
       </div>
     </div>
   </body>
+
+  <script>
+    for (let i = 0; i < 100; i++) {
+      setTimeout(function () {
+        document.getElementById("counter").innerText++;
+      }, 5000);
+    }
+    setTimeout(function () {
+      document.getElementById("full").style.display = "block";
+
+      document.getElementById("test").hidden = true;
+    }, 7000);
+  </script>
 </html>
